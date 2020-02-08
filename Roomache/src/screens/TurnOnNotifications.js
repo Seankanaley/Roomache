@@ -56,7 +56,7 @@ export default class TurnOnNotifications extends Component {
   render() {
     const { pressNotifyBtn, pressSkipBtn } = this.state;
     const { navigation } = this.props;
-    const notifyBtnColor = pressNotifyBtn ? colors.green02 : colors.green01;
+    const notifyBtnColor = pressNotifyBtn ? colors.blue02 : colors.blue01;
     return (
       <View style={styles.wrapper}>
         <View style={styles.content}>
@@ -80,7 +80,7 @@ export default class TurnOnNotifications extends Component {
             onPress={() => navigation.dispatch(navigateToTabsAction)}
             onShowUnderlay={this.handleNotifyBtnShowUnderlay}
             onHideUnderlay={this.handleNotifyBtnHideUnderlay}
-            underlayColor={colors.green02}
+            underlayColor={colors.blue02}
           >
             <Text style={[{ color: colors.white }, styles.buttonText]}>
   Yes, notify me
@@ -93,7 +93,7 @@ export default class TurnOnNotifications extends Component {
             onHideUnderlay={this.handleSkipBtnHideUnderlay}
             underlayColor={colors.gray01}
           >
-            <Text style={[{ color: colors.green01 }, styles.buttonText]}>
+            <Text style={[{ color: colors.blue01 }, styles.buttonText]}>
   Skip
             </Text>
           </TouchableHighlight>

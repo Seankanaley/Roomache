@@ -80,7 +80,7 @@ export default class ForgotPassword extends Component {
 
   render() {
     const { loadingVisible, formValid, validEmail } = this.state;
-    const background = formValid ? colors.green01 : colors.darkOrange;
+    const background = formValid ? colors.blue01 : colors.darkOrange;
     const showNotification = !formValid;
     return (
       <KeyboardAvoidingView
@@ -90,10 +90,10 @@ export default class ForgotPassword extends Component {
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.forgotPasswordHeading}>
-Forgot your password?
+              Forgot your password?
             </Text>
             <Text style={styles.forgotPasswordSubheading}>
-Enter your email to find your account
+              Enter your email to find your account
             </Text>
             <InputField
               customStyle={{ marginBottom: 30 }}

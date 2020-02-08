@@ -123,8 +123,8 @@ class CreateList extends Component {
                     <RadioInput
                       backgroundColor={colors.gray07}
                       borderColor={colors.gray05}
-                      selectedBackgroundColor={colors.green01}
-                      selectedBorderColor={colors.green01}
+                      selectedBackgroundColor={colors.blue01}
+                      selectedBorderColor={colors.blue01}
                       iconColor={colors.white}
                       selected={privacyOption === 'public'}
                     />
@@ -148,8 +148,8 @@ class CreateList extends Component {
                     <RadioInput
                       backgroundColor={colors.gray07}
                       borderColor={colors.gray05}
-                      selectedBackgroundColor={colors.green01}
-                      selectedBorderColor={colors.green01}
+                      selectedBackgroundColor={colors.blue01}
+                      selectedBorderColor={colors.blue01}
                       iconColor={colors.white}
                       selected={privacyOption === 'private'}
                     />
@@ -164,7 +164,7 @@ class CreateList extends Component {
             text="Create"
             textColor={colors.white}
             textAlign="left"
-            background={colors.green01}
+            background={colors.blue01}
             borderColor="transparent"
             iconPosition="left"
             disabled={!location}

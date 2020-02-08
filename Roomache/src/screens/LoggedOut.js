@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image, TouchableHighlight, ScrollView, } from 'react-native';
+import { Text, View, Image, TouchableHighlight, ScrollView, Alert } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import colors from '../styles/colors';
 import transparentHeaderStyle from '../styles/navigation';
@@ -19,6 +19,10 @@ export default class LoggedOut extends Component {
 
   static onFacebookPress() {
     alert('Facebook button pressed');
+  }
+
+  static onGooglePress() {
+    alert('Google button pressed');
   }
 
   static onCreateAccountPress() {
@@ -42,10 +46,18 @@ export default class LoggedOut extends Component {
           </Text>
           <RoundedButton
             text="Continue with Facebook"
-            textColor={colors.green01}
+            textColor={colors.blue01}
             background={colors.white}
             icon={<FontAwesome name="facebook" size={20} style={styles.facebookButtonIcon} />}
             handleOnPress={this.onFacebookPress}
+
+          />
+          <RoundedButton
+            text="Continue with Google"
+            textColor={colors.blue01}
+            background={colors.white}
+            icon={<FontAwesome name="google" size={20} style={styles.facebookButtonIcon} />}
+            handleOnPress={this.onGooglePress}
           />
           <RoundedButton
             text="Create Account"

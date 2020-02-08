@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     display: 'flex',
-    backgroundColor: colors.green01,
+    backgroundColor: colors.blue01,
   },
   welcomeWrapper: {
     flex: 1,
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     marginBottom: 40,
   },
   facebookButtonIcon: {
-    color: colors.green01,
+    color: colors.blue01,
     position: 'relative',
     left: 20,
     zIndex: 8,

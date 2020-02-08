@@ -32,7 +32,7 @@ export default class NextArrowButton extends Component {
         >
           <FontAwesome
             name="angle-right"
-            color={colors.green01}
+            color={colors.blue01}
             size={32}
             style={styles.icon}
           />

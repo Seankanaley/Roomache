@@ -16,12 +16,12 @@ import colors from '../../styles/colors';
 
 export default class Listings extends Component {
   constructor(props) {
-  	super(props);
-  	this.renderListings = this.renderListings.bind(this);
+    super(props);
+    this.renderListings = this.renderListings.bind(this);
   }
 
   renderListings() {
-  	const {
+    const {
       listings, showAddToFav, handleAddToFav, favouriteListings,
     } = this.props;
     return listings.map((listing, index) => (
@@ -31,15 +31,15 @@ export default class Listings extends Component {
       >
         <View>
           {showAddToFav
-          	? (
-            <View style={styles.addToFavoriteBtn}>
-              <HeartButton
-                color={colors.white}
-                selectedColor={colors.pink}
-                selected={favouriteListings.indexOf(listing.id) > -1}
-                onPress={() => handleAddToFav(listing)}
-              />
-            </View>
+            ? (
+              <View style={styles.addToFavoriteBtn}>
+                <HeartButton
+                  color={colors.white}
+                  selectedColor={colors.blue01}
+                  selected={favouriteListings.indexOf(listing.id) > -1}
+                  onPress={() => handleAddToFav(listing)}
+                />
+              </View>
             )
             : null}
           <Image
@@ -57,7 +57,7 @@ export default class Listings extends Component {
             {listing.title}
           </Text>
           <Text style={styles.listingPrice}>
-$
+            $
             {listing.price}
             {' '}
             {listing.priceType}
@@ -67,7 +67,7 @@ $
               <Stars
                 votes={listing.stars}
                 size={10}
-                color={colors.green02}
+                color={colors.blue02}
               />
             )
             : null}
@@ -77,35 +77,35 @@ $
   }
 
   render() {
-  	const { title, boldTitle } = this.props;
-  	const titleStyle = boldTitle ? { fontSize: 22, fontWeight: '600' } : { fontSize: 18 };
-  	return (
-    <View style={styles.wrapper}>
-      <View style={styles.titleWrapper}>
-        <Text style={[titleStyle, styles.title]}>
-          {title}
-        </Text>
-        <TouchableOpacity style={styles.seeAllBtn}>
-          <Text style={styles.seeAllBtnText}>
-See all
+    const { title, boldTitle } = this.props;
+    const titleStyle = boldTitle ? { fontSize: 22, fontWeight: '600' } : { fontSize: 18 };
+    return (
+      <View style={styles.wrapper}>
+        <View style={styles.titleWrapper}>
+          <Text style={[titleStyle, styles.title]}>
+            {title}
           </Text>
-          <FontAwesome
-            name="angle-right"
-            size={18}
-            color={colors.gray04}
-          />
-        </TouchableOpacity>
+          <TouchableOpacity style={styles.seeAllBtn}>
+            <Text style={styles.seeAllBtnText}>
+              See all
+          </Text>
+            <FontAwesome
+              name="angle-right"
+              size={18}
+              color={colors.gray04}
+            />
+          </TouchableOpacity>
+        </View>
+        <ScrollView
+          style={styles.scrollView}
+          contentContainerStyle={{ paddingRight: 30 }}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+        >
+          {this.renderListings()}
+        </ScrollView>
       </View>
-      <ScrollView
-        style={styles.scrollView}
-        contentContainerStyle={{ paddingRight: 30 }}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-      >
-        {this.renderListings()}
-      </ScrollView>
-    </View>
-  	);
+    );
   }
 }
 
@@ -134,14 +134,14 @@ const styles = StyleSheet.create({
     color: colors.gray04,
   },
   seeAllBtn: {
-  	marginTop: 2,
-  	flexDirection: 'row',
-  	alignItems: 'center',
-  	justifyContent: 'space-between',
+    marginTop: 2,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   seeAllBtnText: {
-  	color: colors.gray04,
-  	marginRight: 5,
+    color: colors.gray04,
+    marginRight: 5,
   },
   scrollView: {
     marginTop: 20,
@@ -156,11 +156,11 @@ const styles = StyleSheet.create({
     minHeight: 100,
   },
   image: {
-  	width: undefined,
-  	flex: 1,
-  	height: 100,
-  	borderRadius: 8,
-  	marginBottom: 7,
+    width: undefined,
+    flex: 1,
+    height: 100,
+    borderRadius: 8,
+    marginBottom: 7,
   },
   listingTitle: {
     fontSize: 14,
@@ -169,8 +169,8 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   listingType: {
-  	fontWeight: '700',
-  	fontSize: 10,
+    fontWeight: '700',
+    fontSize: 10,
   },
   addToFavoriteBtn: {
     position: 'absolute',
@@ -179,10 +179,10 @@ const styles = StyleSheet.create({
     zIndex: 2,
   },
   listingPrice: {
-  	color: colors.gray04,
-  	marginTop: 4,
-  	marginBottom: 2,
-  	fontSize: 12,
-  	fontWeight: '300',
+    color: colors.gray04,
+    marginTop: 4,
+    marginBottom: 2,
+    fontSize: 12,
+    fontWeight: '300',
   },
 });

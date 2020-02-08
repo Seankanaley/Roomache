@@ -19,7 +19,7 @@ const listing16Photo = require('./photos/listing16.png');
 
 const listings = [
   {
-    title: 'Experiences',
+    title: 'Potential Roomates',
     boldTitle: false,
     showAddToFav: true,
     listings: [
@@ -105,7 +105,7 @@ const listings = [
         price: 72,
         priceType: 'per night',
         stars: 101,
-        color: colors.green01,
+        color: colors.blue01,
       },
       {
         id: 8,
@@ -149,7 +149,7 @@ const listings = [
         price: 182,
         priceType: 'per night',
         stars: 132,
-        color: colors.green01,
+        color: colors.blue01,
       },
     ],
   },
@@ -196,7 +196,7 @@ const listings = [
         price: '34',
         priceType: 'per person',
         stars: 0,
-        color: colors.green01,
+        color: colors.blue01,
       },
       {
         id: 16,
