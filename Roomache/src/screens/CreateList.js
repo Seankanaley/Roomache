@@ -9,8 +9,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Icon from 'react-native-vector-icons/Ionicons';
-import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome';
+import { Ionicons, FontAwesome } from '@expo/vector-icons';
 import ActionCreators from '../redux/actions';
 import colors from '../styles/colors';
 import InputField from '../components/form/InputField';
@@ -25,7 +24,7 @@ class CreateList extends Component {
         style={styles.closeButton}
         onPress={() => navigation.goBack()}
       >
-        <Icon
+        <Ionicons
           name="md-close"
           size={30}
           color={colors.lightBlack}
@@ -172,7 +171,7 @@ class CreateList extends Component {
             loading={loading}
             icon={(
               <View style={styles.buttonIcon}>
-                <FontAwesomeIcon name="angle-right" color={colors.white} size={30} />
+                <FontAwesome name="angle-right" color={colors.white} size={30} />
               </View>
             )}
             handleOnPress={this.handleCreateList}

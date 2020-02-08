@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons';
 import {
   View,
   Text,
@@ -89,7 +89,7 @@ $
           <Text style={styles.seeAllBtnText}>
 See all
           </Text>
-          <Icon
+          <FontAwesome
             name="angle-right"
             size={18}
             color={colors.gray04}

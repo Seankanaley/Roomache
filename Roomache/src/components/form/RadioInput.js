@@ -7,7 +7,7 @@ import {
   Animated,
   StyleSheet,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { Ionicons } from '@expo/vector-icons';
 import colors from '../../styles/colors';
 
 export default class RadioInput extends Component {
@@ -50,7 +50,7 @@ export default class RadioInput extends Component {
     return (
       <View style={[{ backgroundColor: background, borderColor: border }, styles.wrapper]}>
         <Animated.View style={[{ transform: [{ scale: iconScale }] }, styles.iconWrapper]}>
-          <Icon
+          <Ionicons
             name="md-checkmark"
             color={iconColor}
             size={20}

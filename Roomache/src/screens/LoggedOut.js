@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
-import {
-  Text,
-  View,
-  Image,
-  TouchableHighlight,
-  ScrollView,
-} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { Text, View, Image, TouchableHighlight, ScrollView, } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 import colors from '../styles/colors';
 import transparentHeaderStyle from '../styles/navigation';
 import RoundedButton from '../components/buttons/RoundedButton';
@@ -44,13 +38,13 @@ export default class LoggedOut extends Component {
             style={styles.logo}
           />
           <Text style={styles.welcomeText}>
-Welcome to Airbnb.
+            Welcome to Airbnb.
           </Text>
           <RoundedButton
             text="Continue with Facebook"
             textColor={colors.green01}
             background={colors.white}
-            icon={<Icon name="facebook" size={20} style={styles.facebookButtonIcon} />}
+            icon={<FontAwesome name="facebook" size={20} style={styles.facebookButtonIcon} />}
             handleOnPress={this.onFacebookPress}
           />
           <RoundedButton

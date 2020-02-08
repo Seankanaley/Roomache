@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons';
 import { NavigationActions } from 'react-navigation';
 import {
   View,
@@ -60,7 +60,7 @@ export default class TurnOnNotifications extends Component {
     return (
       <View style={styles.wrapper}>
         <View style={styles.content}>
-          <Icon
+          <FontAwesome
             name="comments-o"
             size={46}
             style={styles.icon}

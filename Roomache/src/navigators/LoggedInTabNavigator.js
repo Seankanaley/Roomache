@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   createBottomTabNavigator,
-  createStackNavigator,
-} from 'react-navigation';
-import Icon from 'react-native-vector-icons/Ionicons';
+  
+} from 'react-navigation-tabs';
+import { createStackNavigator } from 'react-navigation-stack';
+import { Ionicons } from '@expo/vector-icons';
 import ExploreContainer from '../containers/ExploreContainer';
 import InboxContainer from '../containers/InboxContainer';
 import ProfileContainer from '../containers/ProfileContainer';
@@ -12,7 +13,6 @@ import SavedContainer from '../containers/SavedContainer';
 import TripsContainer from '../containers/TripsContainer';
 import CreateList from '../screens/CreateList';
 import colors from '../styles/colors';
-
 const ExploreTab = createStackNavigator({
   ExploreContainer: {
     screen: ExploreContainer,
@@ -25,35 +25,28 @@ const ExploreTab = createStackNavigator({
 {
   mode: 'modal',
 });
-
-
 ExploreTab.navigationOptions = ({ navigation }) => {
   let tabBarVisible = true;
   if (navigation.state.index > 0) {
     tabBarVisible = false;
   }
-
   return {
     tabBarVisible,
   };
 };
-
 const CustomTabBarIcon = (name, size) => {
   const icon = ({ tintColor }) => (
-    <Icon
+    <Ionicons
       name={name}
       size={size}
       color={tintColor}
     />
   );
-
   icon.propTypes = {
     tintColor: PropTypes.string.isRequired,
   };
-
   return icon;
 };
-
 const LoggedInTabNavigator = createBottomTabNavigator({
   Explore: {
     screen: ExploreTab,
@@ -66,28 +59,28 @@ const LoggedInTabNavigator = createBottomTabNavigator({
     screen: SavedContainer,
     navigationOptions: {
       tabBarLabel: 'SAVED',
-      tabBarIcon: CustomTabBarIcon('ios-heart-outline', 22),
+      tabBarIcon: CustomTabBarIcon('ios-heart-empty', 22),
     },
   },
   Trips: {
     screen: TripsContainer,
     navigationOptions: {
       tabBarLabel: 'TRIPS',
-      tabBarIcon: CustomTabBarIcon('ios-ionic', 21),
+      tabBarIcon: CustomTabBarIcon('ios-globe', 21),
     },
   },
   Inbox: {
     screen: InboxContainer,
     navigationOptions: {
       tabBarLabel: 'INBOX',
-      tabBarIcon: CustomTabBarIcon('ios-archive-outline', 25),
+      tabBarIcon: CustomTabBarIcon('ios-filing', 25),
     },
   },
   Profile: {
     screen: ProfileContainer,
     navigationOptions: {
       tabBarLabel: 'PROFILE',
-      tabBarIcon: CustomTabBarIcon('ios-contact-outline', 22),
+      tabBarIcon: CustomTabBarIcon('ios-contact', 22),
     },
   },
 }, {
@@ -100,5 +93,4 @@ const LoggedInTabNavigator = createBottomTabNavigator({
   },
   tabBarPosition: 'bottom',
 });
-
 export default LoggedInTabNavigator;

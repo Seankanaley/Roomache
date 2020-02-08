@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import {
-  View,
-  Text,
-  ScrollView,
-  KeyboardAvoidingView,
-} from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
+import {View, Text, ScrollView, KeyboardAvoidingView, AsyncStorage } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ActionCreators from '../redux/actions';
@@ -30,7 +25,7 @@ class LogIn extends Component {
     headerLeft: <NavBarButton
       handleButtonPress={() => navigation.goBack()}
       location="left"
-      icon={<Icon name="angle-left" color={colors.white} size={30} />}
+      icon={<FontAwesome name="angle-left" color={colors.white} size={30} />}
     />,
     headerStyle: transparentHeaderStyle,
     headerTransparent: true,
@@ -108,6 +103,7 @@ class LogIn extends Component {
   toggleNextButtonState() {
     const { validEmail, validPassword } = this.state;
     if (validEmail && validPassword) {
+      AsyncStorage.setItem("userToken", "loggedIn")
       return false;
     }
     return true;
@@ -128,7 +124,7 @@ class LogIn extends Component {
         <View style={styles.scrollViewWrapper}>
           <ScrollView style={styles.scrollView}>
             <Text style={styles.loginHeader}>
-Log In
+              Log In
             </Text>
             <InputField
               labelText="EMAIL ADDRESS"
@@ -177,9 +173,6 @@ Log In
   }
 }
 
-const mapStateToProps = state => ({
-  loggedInStatus: state.loggedInStatus,
-});
 
 const mapDispatchToProps = dispatch => bindActionCreators(ActionCreators, dispatch);
 
@@ -191,4 +184,4 @@ LogIn.propTypes = {
   }).isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LogIn);
+export default connect(null, mapDispatchToProps)(LogIn);

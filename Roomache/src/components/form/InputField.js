@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons';
 import {
   View,
   Text,
@@ -100,7 +100,7 @@ export default class InputField extends Component {
           )
           : null }
         <Animated.View style={[{ transform: [{ scale: iconScale }] }, styles.checkmarkWrapper]}>
-          <Icon
+          <FontAwesome
             name="check"
             color={colors.white}
             size={20}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons';
 import {
   TouchableHighlight,
   StyleSheet,
@@ -30,7 +30,7 @@ export default class NextArrowButton extends Component {
           onPress={handleNextButton}
           disabled={disabled}
         >
-          <Icon
+          <FontAwesome
             name="angle-right"
             color={colors.green01}
             size={32}

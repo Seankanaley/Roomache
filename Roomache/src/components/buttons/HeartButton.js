@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons';
 import {
   View,
   TouchableOpacity,
@@ -36,13 +36,13 @@ export default class HeartButton extends Component {
         onPress={this.addToFavorite}
       >
         <View>
-          <Icon
+          <FontAwesome
             name={addedToFavorite ? 'heart' : 'heart-o'}
             color={addedToFavorite ? selectedColor : color}
             size={18}
           />
 
-          <Icon
+          <FontAwesome
             name="heart-o"
             size={18}
             color={color}

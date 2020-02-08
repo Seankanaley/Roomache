@@ -1,29 +1,31 @@
-import { createStackNavigator, createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 import LoggedOut from '../screens/LoggedOut';
-import logIn from '../screens/LogIn';
+import LogIn from '../screens/LogIn';
 import ForgotPassword from '../screens/ForgotPassword';
 import TurnOnNotifications from '../screens/TurnOnNotifications';
-import LoggedInTabNavigation from './LoggedInTabNavigator';
+import LoggedInTabNavigator from './LoggedInTabNavigator';
+import AuthLoadingScreen from '../screens/AuthLoadingScreen';
 
 const LoggedOutStack = createStackNavigator({
     LoggedOut: { screen: LoggedOut },
     LogIn: { screen: LogIn },
     ForgotPassword: { screen: ForgotPassword }
 });
-
 export default createAppContainer(createSwitchNavigator({
     LoggedOut: LoggedOutStack,
     LoggedIn: {
-        screen: LoggedInTabNavigation,
+        screen: LoggedInTabNavigator,
         navigationOptions: {
             header: null,
             gesturesEnables: false
         }
     },
-    TurnOnNotifications: { screen: TurnOnNotifications }
+    TurnOnNotifications: { screen: TurnOnNotifications },
+    AuthLoadingScreen: { screen: AuthLoadingScreen }
 },
     {
-        initialRouteName: "LoggedOut"
+        initialRouteName: "AuthLoadingScreen"
     }
 )
 );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { FontAwesome } from '@expo/vector-icons';
 import {
   View,
   Text,
@@ -15,7 +15,7 @@ export default class Stars extends Component {
     const starElements = [];
     for (let i = 0; i < 5; i++) {
       starElements.push(
-        <Icon
+        <FontAwesome
           key={`star-${i}`}
           name="star"
           size={size}
