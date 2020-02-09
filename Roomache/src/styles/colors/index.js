@@ -10,6 +10,8 @@ export default {
   white: '#ffffff',
   blue01: '#4630eb',
   blue02: '#291c88',
+  green: '#12d331',
+  lightOrange: '#e7764d',
   darkOrange: '#d93900',
   lightGray: '#d8d8d8',
   gray01: '#f3f3f3',

@@ -47,20 +47,18 @@ export default class Listings extends Component {
             resizeMode="contain"
             source={listing.photo}
           />
-          <Text style={[{ color: listing.color }, styles.listingType]}>
-            {listing.type}
+          <Text style={[{ color: listing.color }, styles.listingName]}>
+            {listing.name}
           </Text>
           <Text
-            style={styles.listingTitle}
+            style={styles.listingPersonality}
             numberOfLines={2}
           >
-            {listing.title}
+            {listing.personality}
           </Text>
-          <Text style={styles.listingPrice}>
-            $
-            {listing.price}
+          <Text style={styles.listingLocation}>
+            {listing.location}
             {' '}
-            {listing.priceType}
           </Text>
           {listing.stars > 0
             ? (
@@ -162,13 +160,17 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     marginBottom: 7,
   },
-  listingTitle: {
-    fontSize: 14,
+  listingCredit: {
+    fontSize: 12,
+    fontWeight: '500'
+  },
+  listingPersonality: {
+    fontSize: 12,
     fontWeight: '700',
     color: colors.gray04,
     marginTop: 2,
   },
-  listingType: {
+  listingName: {
     fontWeight: '700',
     fontSize: 10,
   },
@@ -178,8 +180,8 @@ const styles = StyleSheet.create({
     top: 7,
     zIndex: 2,
   },
-  listingPrice: {
-    color: colors.gray04,
+  listingLocation: {
+    color: colors.blue,
     marginTop: 4,
     marginBottom: 2,
     fontSize: 12,
