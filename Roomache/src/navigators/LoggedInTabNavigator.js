@@ -10,7 +10,7 @@ import ExploreContainer from '../containers/ExploreContainer';
 import InboxContainer from '../containers/InboxContainer';
 import ProfileContainer from '../containers/ProfileContainer';
 import SavedContainer from '../containers/SavedContainer';
-import TripsContainer from '../containers/TripsContainer';
+import MatchesContainer from '../containers/MatchesContainer';
 import CreateList from '../screens/CreateList';
 import colors from '../styles/colors';
 const ExploreTab = createStackNavigator({
@@ -62,11 +62,11 @@ const LoggedInTabNavigator = createBottomTabNavigator({
       tabBarIcon: CustomTabBarIcon('ios-heart-empty', 22),
     },
   },
-  Trips: {
-    screen: TripsContainer,
+  Matches: {
+    screen: MatchesContainer,
     navigationOptions: {
-      tabBarLabel: 'TRIPS',
-      tabBarIcon: CustomTabBarIcon('ios-globe', 21),
+      tabBarLabel: 'MATCHES',
+      tabBarIcon: CustomTabBarIcon('ios-people', 28),
     },
   },
   Inbox: {

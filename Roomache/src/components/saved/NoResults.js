@@ -17,16 +17,13 @@ export default class NoResults extends Component {
 Saved
         </Text>
         <Text style={styles.description}>
-Not every day is filled with adventures, but you can start planning for the next one.
-        </Text>
-        <Text style={styles.description}>
-Tap the heart on any home to start saving your favorites here.
+Saved rental locations will go here.
         </Text>
       </ScrollView>
       <View style={styles.footer}>
         <TouchableHighlight style={styles.findHomesButton}>
           <Text style={styles.findHomesButtonText}>
-Find homes
+Find Rentals
           </Text>
         </TouchableHighlight>
       </View>

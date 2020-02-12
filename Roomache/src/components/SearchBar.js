@@ -19,7 +19,7 @@ export default class SearchBar extends Component {
           style={styles.searchIcon}
         />
         <Text style={styles.textInput}>
-Try "Cape Town"
+Try "Portland"
         </Text>
       </View>
     </View>

@@ -5,12 +5,12 @@ import {
   StyleSheet,
 } from 'react-native';
 
-export default class TripsContainer extends Component {
+export default class MatchesContainer extends Component {
   render() {
     return (
       <View style={styles.wrapper}>
         <Text>
-Trips Container
+Matches Container
         </Text>
       </View>
     );

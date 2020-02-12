@@ -7,7 +7,7 @@ import RoundedButton from '../components/buttons/RoundedButton';
 import NavBarButton from '../components/buttons/NavBarButton';
 import styles from './styles/LoggedOut';
 
-const airbnbLogo = require('../img/airbnb-logo.png');
+const airbnbLogo = require('../img/roomacheLogo.png');
 
 export default class LoggedOut extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -42,7 +42,7 @@ export default class LoggedOut extends Component {
             style={styles.logo}
           />
           <Text style={styles.welcomeText}>
-            Welcome to Airbnb.
+            Welcome to RoomAche.
           </Text>
           <RoundedButton
             text="Continue with Facebook"
@@ -81,7 +81,7 @@ export default class LoggedOut extends Component {
               {' options,'}
             </Text>
             <Text style={styles.termsText}>
-              {"I agree to Airbnb's "}
+              {"I agree to RoomAche's "}
             </Text>
             <TouchableHighlight style={styles.linkButton}>
               <Text style={styles.termsText}>

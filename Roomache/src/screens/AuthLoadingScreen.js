@@ -8,7 +8,7 @@ export default class AuthLoadingScreen extends React.Component {
     }
 bootstrapAsync = async() => {
     const userToken = await AsyncStorage.getItem("userToken");
-    this.props.navigation.navigate(userToken ? "LoggedOut" : "LoggedOut");
+    this.props.navigation.navigate(userToken ? "LoggedIn" : "LoggedOut");
 };
 render() {
    return (

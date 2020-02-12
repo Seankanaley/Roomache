@@ -1,21 +1,16 @@
 import colors from '../styles/colors';
 
 const listing1Photo = require('./photos/harold1.png');
-const listing2Photo = require('./photos/listing2.png');
-const listing3Photo = require('./photos/listing3.png');
-const listing4Photo = require('./photos/listing4.png');
-const listing5Photo = require('./photos/listing5.png');
-const listing6Photo = require('./photos/listing6.png');
+const listing2Photo = require('./photos/harold4.png');
+const listing3Photo = require('./photos/harold3.png');
+const listing4Photo = require('./photos/harold2.png');
+const listing5Photo = require('./photos/harold5.png');
+const listing6Photo = require('./photos/harold6.png');
 const listing7Photo = require('./photos/listing7.png');
 const listing8Photo = require('./photos/listing8.png');
 const listing9Photo = require('./photos/listing9.png');
 const listing10Photo = require('./photos/listing10.png');
 const listing11Photo = require('./photos/listing11.png');
-const listing12Photo = require('./photos/listing12.png');
-const listing13Photo = require('./photos/listing13.png');
-const listing14Photo = require('./photos/listing14.png');
-const listing15Photo = require('./photos/listing15.png');
-const listing16Photo = require('./photos/listing16.png');
 
 const listings = [
   {
@@ -28,109 +23,104 @@ const listings = [
         photo: listing1Photo,
         name: 'JOHNNY LINDEN, M, 27',
         personality: "Relaxed, avid reader who enjoys a hot cup of tea.",
-        location: 'Spokane, WA',
+        location: 'Portland, OR',
         color: colors.darkOrange,
       },
       {
         id: 2,
-        photo: listing1Photo,
-        name: 'JOHNNY LINDEN, M, 27',
-        personality: "Relaxed, avid reader who enjoys a hot cup of tea.",
-        location: 'Spokane, WA',
+        photo: listing2Photo,
+        name: 'FRANK CHUBOTSKY, M, 32',
+        personality: "Friendly upbeat guy who loves hang out and watch netflix.",
+        location: 'Portland, OR',
         color: colors.darkOrange,
       },
       {
         id: 3,
-        photo: listing1Photo,
-        name: 'JOHNNY LINDEN, M, 27',
-        personality: "Relaxed, avid reader who enjoys a hot cup of tea.",
-        location: 'Spokane, WA',
+        photo: listing3Photo,
+        name: 'JAKE MCULLEN, M, 23',
+        personality: "Computer programmer at Nike, big foodie.",
+        location: 'Portland, OR',
         color: colors.darkOrange,
       },
       {
         id: 4,
-        photo: listing1Photo,
-        name: 'JOHNNY LINDEN, M, 27',
-        personality: "Relaxed, avid reader who enjoys a hot cup of tea.",
-        location: 'Spokane, WA',
+        photo: listing4Photo,
+        name: 'CALEB RINEHARDT, M, 26',
+        personality: "Musician 14/7 the other hours I'm sleeping or drinking .",
+        location: 'Portland, OR',
         color: colors.darkOrange,
       },
       {
         id: 5,
-        photo: listing1Photo,
-        name: 'JOHNNY LINDEN, M, 27',
-        personality: "Relaxed, avid reader who enjoys a hot cup of tea.",
-        location: 'Spokane, WA',
+        photo: listing5Photo,
+        name: 'HAROLD DOBSON, M, 55',
+        personality: "Trend setter, when I'm not traveling abroad or at festivals I'm writing my biography.",
+        location: 'Portland, OR',
         color: colors.darkOrange,
       },
       {
         id: 6,
-        photo: listing1Photo,
-        name: 'JOHNNY LINDEN, M, 27',
-        personality: "Relaxed, avid reader who enjoys a hot cup of tea.",
-        location: 'Spokane, WA',
+        photo: listing6Photo,
+        name: 'FINNEAS JOHNSON, M, 42',
+        personality: "Hair stylist, and part owner of a taco truck. I'm always busy!",
+        location: 'Portland, OR',
         color: colors.darkOrange,
       },
     ],
   },
   {
-    title: 'Homes',
+    title: 'Rentals',
     boldTitle: false,
     showAddToFav: true,
     listings: [
       {
         id: 7,
         photo: listing7Photo,
-        type: 'ENTIRE HOUSE - 1 BED',
-        title: 'BALIAN TREEHOUSE with beautiful pool',
-        location: 'Bali, Indonesia',
-        price: 72,
-        priceType: 'per night',
-        stars: 101,
+        name: '$1000',
+        personality: '1BR Gorgeous Units in Luxury Building. Washer/Dryer in Units.',
+        location: 'Portland, OR',
+        price: 1000,
+        stars: 3.5,
         color: colors.blue01,
       },
       {
         id: 8,
         photo: listing8Photo,
-        type: 'ENTIRE VILLA - 3 BEDS',
-        title: 'Casa de Rio - Beach and Mountains',
-        location: 'Secarias, Portugal',
-        price: 69,
-        priceType: 'per night',
-        stars: 119,
-        color: colors.brown01,
+        name: '$1400',
+        personality: 'Spacious, updated 2 bedroom, 1 bathroom apartment in Lakeview, available May 1st.',
+        location: 'Portland, OR',
+        price: 1200,
+        stars: 4,
+        color: colors.blue01,
       },
       {
         id: 9,
         photo: listing9Photo,
-        type: 'ENTIRE HOUSE - 1 BED',
-        title: 'Cozy A-Frame Cabin in the Redwoods',
-        location: 'Cazadero, United States',
-        price: 152,
-        priceType: 'per night',
-        stars: 320,
-        color: colors.darkOrange,
+        name: '$4500',
+        personality: 'Spacious Condo Just a 5 Minute Walk to the Metro',
+        location: 'Portland, OR',
+        price: 4500,
+        stars: 5,
+        color: colors.blue01,
       },
       {
         id: 10,
         photo: listing10Photo,
-        type: 'ENTIRE GUESTHOUSE - 1 BED',
-        title: '1880s Carriage House in Curtis Park',
-        location: 'Denver, United States',
-        price: 116,
-        priceType: 'per night',
-        stars: 300,
-        color: colors.gray04,
+        name: '$2000',
+        personality: 'Charming 2 BR on Lovely Tree-Lined Street',
+        location: 'Portland, OR',
+        price: 2000,
+        stars: 5,
+        color: colors.blue01,
       },
       {
         id: 11,
         photo: listing11Photo,
-        type: 'ENTIRE BOAT - 2 BEDS',
-        title: 'A Pirate\'s Life for Me Houseboar!',
-        location: 'Charleston, United States',
-        price: 182,
-        priceType: 'per night',
-        stars: 132,
+        name: '$1400',
+        personality: 'Tiny home located near portland',
+        location: 'Portland, OR',
+        price: 1400,
+        stars: 4,
         color: colors.blue01,
       },
     ],
